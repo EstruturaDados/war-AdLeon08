@@ -1,6 +1,6 @@
 /*
 -------------------------------------------------------------
-🧗‍♂️ DESAFIO WAR ESTRUTURADO - NÍVEL AVENTUREIRO
+DESAFIO WAR ESTRUTURADO - NÍVEL AVENTUREIRO
 Aluno: Aderlon Barbosa Pessoa
 Matéria: Estrutura de Dados
 Descrição:
@@ -44,27 +44,27 @@ dados de ataque e defesa com rand().
 -------------------------------------------------------------
 */
 void simularBatalha(Territorio *atacante, Territorio *defensor) {
-    printf("\n⚔️  BATALHA ENTRE %s (Atacante) E %s (Defensor)\n", atacante->nome, defensor->nome);
+    printf("\n  BATALHA ENTRE %s (Atacante) E %s (Defensor)\n", atacante->nome, defensor->nome);
 
     // sorteia os dados (valores entre 1 e 6)
     int dadoAtaque = (rand() % 6) + 1;
     int dadoDefesa = (rand() % 6) + 1;
 
     // mostra os valores sorteados
-    printf("🎲 Dado do ataque: %d\n", dadoAtaque);
-    printf("🛡️ Dado da defesa: %d\n", dadoDefesa);
+    printf(" Dado do ataque: %d\n", dadoAtaque);
+    printf(" Dado da defesa: %d\n", dadoDefesa);
 
     // verifica quem venceu a rodada
     if (dadoAtaque > dadoDefesa) {
         // atacante vence — defensor perde uma tropa
         defensor->numeroTropas--;
 
-        printf("✅ O ataque foi bem-sucedido! O defensor perdeu 1 tropa.\n");
+        printf(" O ataque foi bem-sucedido! O defensor perdeu 1 tropa.\n");
 
         // se o defensor perder todas as tropas, o território é conquistado
         if (defensor->numeroTropas <= 0) {
             defensor->numeroTropas = 0;
-            printf("🏳️ O território %s foi conquistado por %s!\n",
+            printf(" O território %s foi conquistado por %s!\n",
                    defensor->nome, atacante->corExercito);
 
             // o defensor muda de cor (conquistado)
@@ -74,7 +74,7 @@ void simularBatalha(Territorio *atacante, Territorio *defensor) {
         // empate ou defesa vence — atacante é favorecido
         atacante->numeroTropas--;
         if (atacante->numeroTropas < 0) atacante->numeroTropas = 0;
-        printf("❌ A defesa resistiu! O atacante perdeu 1 tropa.\n");
+        printf(" A defesa resistiu! O atacante perdeu 1 tropa.\n");
     }
 
     printf("------------------------------------------\n");
@@ -89,11 +89,11 @@ Mostra o estado atual de todos os territórios.
 */
 void mostrarMapa(Territorio *mapa, int tamanho) {
     printf("\n==========================================\n");
-    printf("       🌍 ESTADO ATUAL DO MAPA DE GUERRA\n");
+    printf("        ESTADO ATUAL DO MAPA DE GUERRA\n");
     printf("==========================================\n\n");
 
     for (int i = 0; i < tamanho; i++) {
-        printf("🛡️  Território %d\n", i + 1);
+        printf("  Território %d\n", i + 1);
         printf("    Nome: %s\n", mapa[i].nome);
         printf("    Cor do Exército: %s\n", mapa[i].corExercito);
         printf("    Tropas em campo: %d\n", mapa[i].numeroTropas);
@@ -114,7 +114,7 @@ int main() {
     srand(time(NULL));
 
     printf("==========================================\n");
-    printf("     🧗‍♂️ DESAFIO WAR ESTRUTURADO - NÍVEL AVENTUREIRO\n");
+    printf("      DESAFIO WAR ESTRUTURADO - NÍVEL AVENTUREIRO\n");
     printf("==========================================\n\n");
 
     printf(">>> Cadastro Inicial dos Territórios <<<\n\n");
@@ -168,7 +168,7 @@ int main() {
         if (atacante < 1 || atacante > QTD_TERRITORIOS ||
             defensor < 1 || defensor > QTD_TERRITORIOS ||
             atacante == defensor) {
-            printf("⚠️  Escolha inválida! Tente novamente.\n");
+            printf(" Escolha inválida! Tente novamente.\n");
             continue;
         }
 
@@ -187,7 +187,7 @@ int main() {
     // libera a memória alocada com calloc
     free(mapa);
 
-    printf("\n🏁 Fim das batalhas! O mapa final foi exibido acima.\n");
+    printf("\n Fim das batalhas! O mapa final foi exibido acima.\n");
     return 0;
 }
 
