@@ -1,6 +1,6 @@
 /*
 -------------------------------------------------------------
-🗺️ DESAFIO WAR ESTRUTURADO - NÍVEL NOVATO
+DESAFIO WAR ESTRUTURADO - NÍVEL NOVATO
 Aluno: Aderlon Barbosa Pessoa
 Matéria: Estrutura de Dados
 Descrição:
@@ -32,7 +32,7 @@ int main() {
 
     // mensagens iniciais só pra deixar mais bonito
     printf("==========================================\n");
-    printf("     🗺️ DESAFIO WAR ESTRUTURADO - NÍVEL NOVATO\n");
+    printf("     DESAFIO WAR ESTRUTURADO - NÍVEL NOVATO\n");
     printf("==========================================\n\n");
 
     printf(">>> Cadastro Inicial dos Territórios <<<\n\n");
@@ -63,12 +63,12 @@ int main() {
 
     // depois que terminou o cadastro, mostro tudo que foi digitado
     printf("==========================================\n");
-    printf("       🌍 ESTADO ATUAL DO MAPA DE GUERRA\n");
+    printf("       ESTADO ATUAL DO MAPA DE GUERRA\n");
     printf("==========================================\n\n");
 
     // laço pra mostrar cada território e suas informações
     for (int i = 0; i < QTD_TERRITORIOS; i++) {
-        printf("🛡️  Território %d\n", i + 1);
+        printf("  Território %d\n", i + 1);
         printf("    Nome: %s\n", mapa[i].nome);
         printf("    Cor do Exército: %s\n", mapa[i].corExercito);
         printf("    Tropas em campo: %d\n", mapa[i].numeroTropas);
@@ -76,7 +76,7 @@ int main() {
     }
 
     // mensagem final pra encerrar
-    printf("🧭 Fim do cadastro. Os territórios estão prontos para a batalha!\n");
+    printf(" Fim do cadastro. Os territórios estão prontos para a batalha!\n");
 
     return 0; // fim do programa
 }
