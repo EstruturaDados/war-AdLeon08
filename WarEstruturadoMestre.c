@@ -1,5 +1,5 @@
 // DESAFIO WAR ESTRUTURADO - NÍVEL MESTRE
-// Autor: [Seu Nome]
+// Autor: Aderlon Barbosa Pessoa
 // Objetivo: Criar um jogo simplificado de WAR com modularização, ataques e sistema de missão.
 // Esse código é a evolução do nível Aventureiro, agora com funções separadas e um menu principal.
 
